@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!--font-awesome ícones-->
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#apresentacao"><i class="fa-solid fa-house fa-sm"></i></a></li><!--Apresentação-->
+            <li><a href="#skills"><i class="fa-solid fa-brain fa-sm"></i></a></li> <!--Skills-->
+            <li><a href="#formacao"><i class="fa-solid fa-graduation-cap fa-sm"></i></a></li> <!--Formação-->
+            <li><a href="#projetos"><i class="fa-solid fa-diagram-project fa-sm"></i></a></li><!--Projetos-->
+            <li><a href=""><i class="fa-solid fa-moon fa-sm"></i></a></li> <!--Claro e escuro-->
+        </ul>
+    </header>
+    
+    <main id="grid-container">
+        <div id="ficha">
+            <div id="foto_perfil"></div>
+            <h1>Gustavo Guanabara</h1>
+            <p>Formado em Ciência da Computação, com especialização em docência superior, desenvolvimento web e inteligência artificial. Apaixonado por teconologia e sempre em busca de novos desafios. Atualmente, atuo como professor e desenvolvedor, compartilhando conhecimento através de cursos online e projetos de código aberto.</p>
+            <ul id="social">
+                <li id="linkedin"><a href="http://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in fa-xl"></i></a></li>
+                <li id="github"><a href="http://github.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github fa-xl"></i></a></li>
+                <li id="youtube"><a href="http://youtube.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-youtube fa-xl"></i></a></li>
+                <li id="instagram"><a href="http://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                <li id="?"><a href="http://#" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe fa-xl"></i></a></li>
+            </ul>
+        </div>
+
+        <div class="conteudo">
+            <div id="apresentacao">
+                <h1><i class="fa-solid fa-handshake fa-xs"></i> Deixe-me apresentar</h1>
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/V9VM1SI1uYw?si=B7M8xDLITL1UwZdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="video-apresentacao"></iframe>
+            </div>
+        </div>
+
+        <div class="conteudo">  
+            <div id="skills">
+                <h1><i class="fa-solid fa-brain fa-xs"></i> Minhas skills</h1>
+                <h2 class="hardskill">HTML5</h2>
+                <h2 class="hardskill">CSS3</h2>
+                <h2 class="hardskill">JavaScript</h2>
+                <h2 class="hardskill">PHP</h2>
+                <h2 class="softskill">Comunicação</h2>
+                <h2 class="softskill">Trabalho em equipe</h2>
+                <h2 class="softskill">Adaptabilidade</h2>
+                <h2 class="softskill">Liderança</h2>
+            </div>
+        </div>
+
+        <div class="conteudo">
+            <div id="formacao">
+                <h1><i class="fa-solid fa-graduation-cap fa-xs"></i> Formação</h1>
+                <div class="card">
+                    <p class="formacao_data">2021-2024</p>
+                    <h2 class="formacao_nome">Centro de Inteligência Artificial</h2>
+                    <p>Técnicas para aplicação de IA</p>
+                </div>
+                <div class="card">
+                    <p class="formacao_data">2009-2010</p>
+                    <h2 class="formacao_nome">Fundação para Ensino à Distância</h2>
+                    <p>Especialização para produção em ambientes EAD</p>
+                </div>
+                <div class="card">
+                    <p class="formacao_data">2001-2003</p>
+                    <h2 class="formacao_nome">Laboratório de Docência Superior</h2>
+                    <p>Docência para Ensino Superior Profissional</p>
+                </div>
+                <div class="card">
+                    <p class="formacao_data">1998-2000</p>
+                    <h2 class="formacao_nome">Centro de Graduação de Professores</h2>
+                    <p>Licenciatura em Informática</p>
+                </div>
+                <div class="card">
+                    <p class="formacao_data">1995-2000</p>
+                    <h2 class="formacao_nome">Instituto Superior de Tecnologia</h2>
+                    <p>Bacharelado em Ciência da Computação</p>
+                </div>
+                <div class="card">
+                    <p class="formacao_data">1991-1994</p>
+                    <h2 class="formacao_nome">Escola Técnica Carioca</h2>
+                    <p>Técnico em informática</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="conteudo">
+            <div id="projetos">
+                <h1><i class="fa-solid fa-diagram-project fa-xs"></i> Projetos</h1>
+                <div class="card">
+                    <img src="imagens/" alt="Foto do projeto Álbum de fotos">
+                    <p class="formacao_data">2025</p>
+                    <h2>Projeto Álbum de Fotos</h2>
+                    <p>Projeto construído para treinar conteúdos flexíveis usando CSS FlexBox para mostrar um álbum de fotos.</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/" alt="Foto do projeto Login">
+                    <p class="formacao_data">2025</p>
+                    <h2>Projeto Login</h2>
+                    <p>Projeto construído para treinar responsividade e formulários em uma das telas mais populares em sistemas.</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/" alt="Foto do projeto Redes Sociais">
+                    <p class="formacao_data">2025</p>
+                    <h2>Projeto Redes Sociais</h2>
+                    <p>Projeto construído para treinar responsividade e múltiplos media queries e divulgar as suas principais redes sociais</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/" alt="Foto do projeto Android">
+                    <p class="formacao_data">2025</p>
+                    <h2>Projeto Android</h2>
+                    <p>Projeto construído para treinar responsividade e múltiplos media queries e divulgar as suas principais redes sociais.</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/projeto-02-cordel-edit.jpg" alt="Foto do projeto Cordel">
+                    <p class="formacao_data">2025</p>
+                    <h2>Projeto Cordel</h2>
+                    <p>Projeto construído para treinar efeito parallax em imagens e a apresentação de conteúdo em diversos tamanhos de tela.</p>
+                </div>
+                <div class="card">
+                    <img src="imagens/projeto-01-videos-edit.jpg" alt="Foto do projeto Vídeos">
+                    <p class="formacao_data">2025</p>
+                    <h2>Projeto de Vídeos</h2>
+                    <p>Projeto construido para treinar a inserção de vídeos em nosso site, além da navegação entre páginas.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Portfólio desenvolvido por Curso em Vídeo em 2025.</p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+</html>
