@@ -168,6 +168,7 @@ p {
   border-radius: 15px;
   background-color: var(--fundo-card);
   border-left: var(--destaque-formacao) 4px solid;
+  box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.164);
 }
 
 .card:hover {
@@ -188,7 +189,16 @@ p {
   color: var(--destaque-formacao);
 }
 
-#projetos > .card > img {
+#projetos > .card > a {
+  text-decoration: none;
+  color: black;
+}
+
+#projetos > .card > a > p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#projetos > .card > a > img {
   width: 100%;
   height: 225px;
   border-radius: 15px;
@@ -200,6 +210,7 @@ footer {
   color: white;
   font-weight: bold;
   padding: 9px;
+  width: 100%;
 }
 
 footer > p {
