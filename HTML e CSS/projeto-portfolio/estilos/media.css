@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 700px){
+    #grid-container {
+        grid-template: repeat(4, auto) / 20px 300px 1fr 20px;
+    }
+
+    #ficha {
+        grid-column: 2 / 3;
+        
+    }
+    .conteudo {
+        grid-column: 3 / 4;
+    }
+
+    #apresentacao {
+        
+    }
+
+    #projetos > .card {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    
+
+    #projetos > .card > a > img {
+        align-self: end;
+        order: 1;
+        height: 15vh;
+        border-radius: 15px;
+        min-width: 30%;
+        margin: auto;
+    }
+}
