@@ -26,13 +26,12 @@
 }
 
 :root {
-  --fundo-principal: white;
-  --texto: black;
+  --fundo-principal: #f5f5f5;
+  --texto: #222222;
   --texto-inverso: white;
   --destaque: rgb(31, 118, 218);
-  --destaque-formacao: rgb(103, 196, 212);
-  --destaque-inverso: orange;
-  --fundo-card: rgba(220, 220, 220, 0.507);
+  --destaque-inverso: #66bbff;
+  --fundo-card: #ffffff;
 }
 
 html {
@@ -40,45 +39,38 @@ html {
 }
 
 body {
-  background-color: gainsboro;
+  background-color: var(--fundo-principal);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  line-height: 1.5em;
   font-size: 1em;
 }
 
 header {
   display: flex;
-  justify-content: center;
-  background-color: var(--destaque);
-  width: 100vw;
-  /*Colar menu no topo */
-  
-  position: fixed;
-  top: 0;
-}
-
-header > ul {
-  display: flex;
-  flex-direction: row;
   justify-content: end;
-  width: 98vw;
-}
+  align-content: center;
 
-header > ul > li {
-  margin: 0px 5px; 
-  padding: 12px 3px;
-  color: white;
   background-color: var(--destaque);
+  
+  /*Colar menu no topo */
+  padding: 10px;
 }
 
-header > ul > li > a, #botao-tema {
-  color: white;
-  padding: 12px;
-  border-radius: 10px;
+nav#menu > ul {
+  display: flex;
+  gap: 10px;
 }
 
-header > ul > li > a:hover, #botao-tema:hover {
+nav#menu a {
+  text-decoration: none;
+  color: var(--texto-inverso);
+  padding: 12px 15px;
+  border-radius: 8px;
+}
+
+nav#menu a:hover {
   color: var(--destaque);
-  background-color: rgba(140, 182, 231, 0.671);
+  background-color: var(--destaque-inverso);
   transition-duration: 0.3s;
   cursor: pointer;
 }
@@ -87,42 +79,38 @@ ul {
   list-style-type: none;
 }
 
-#tema {
-  background-color: black;
-  color: orange;
-}
-
 #grid-container {
   display: grid;
-  text-align: left;
   grid-template: auto auto auto auto / 20px 1fr 20px;
   gap: 12px;
-  background-color: gainsboro;
+  background-color: var(--fundo-principal);
 }
 
 main {
   /* a margem é necessária devido ao header colado no topo */
-  margin-top: 60px;
+  margin-top: 20px;
+  background-color: var(--fundo-card);
+  
 }
 
 .conteudo, #ficha { /* Ficha é a caixa de introdução, conteúdo é todo o resto */
   grid-column: 2 / 3;
-  background-color: white;
+  background-color: var(--fundo-card);
   
   padding: 15px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 #foto_perfil {
+  display: block;
   margin: auto;
-  height: 150px;
-  width: 180px;
+  width: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
   border-radius: 100%;
   outline: 3px solid var(--destaque);
-  border: 4px solid white;
-
-  background-image: url(../imagens/guanabara-perfil-edit.jpg);background-position: center;
-  background-size: cover;
+  border: 4px solid var(--fundo-principal);
 }
 
 #ficha > h1 {
@@ -136,6 +124,7 @@ i.fa-handshake {
 h1 {
   color: var(--destaque);
   margin: 15px 7px;
+  margin-bottom: 20px;
 }
 
 h2 {
@@ -159,7 +148,7 @@ p {
 }
 
 #social > li > a {
-  color: blue;
+  color: var(--destaque);
   text-decoration: none;
 }
 
@@ -169,25 +158,67 @@ p {
 }
 
 #video-apresentacao {
-  display: block;
   width: 100%;
+  height: 100%;
   margin: auto;
-  padding: 10px;
+  aspect-ratio: 16/9;
   border-radius: 15px;
 }
 
-.card { /* Usado tanto no "Formação" tanto no "Projetos" */
-  margin: 14px;
-  padding: 7px;
+#skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+#skills .info {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+#skills .nome {
+  font-weight: bold;
+  color: var(--texto);
+}
+
+#skills .porcent {
+  font-weight: bold;
+  color: var(--destaque);
+}
+
+#skills .barra {
+  width: 100%;
+  height: 8px;
+  background-color: var(--fundo-principal);
+  border-radius: 4px;
+}
+
+#skills .progresso {
+  height: 100%;
+  background-color: var(--destaque-inverso);
+  border-radius: 4px;
+}
+
+#formacao {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.curso {
   border-radius: 15px;
   background-color: var(--fundo-card);
-  border-left: var(--destaque-formacao) 4px solid;
+  border-left: var(--destaque-inverso) 4px solid;
   box-shadow: 1px 3px 10px 0px rgba(0, 0, 0, 0.164);
+  padding: 5px;
+  padding-left: 15px;
 }
 
-.card:hover {
+.curso:hover {
   border-left: var(--destaque) 15px solid;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .formacao_nome {
@@ -199,32 +230,53 @@ p {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-#formacao > .card > h2 {
-  color: var(--destaque-formacao);
+#formacao > .curso > h2 {
+  color: var(--destaque-inverso);
 }
 
-#projetos > .card > a {
+#projeto-container {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+
+#projeto-container a {
   text-decoration: none;
-  color: black;
+  color: var(--texto);
 }
 
-#projetos > .card > a > p {
-  font-family: Arial, Helvetica, sans-serif;
+#projeto-container .projeto {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-color: var(--fundo-principal);
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 5px solid var(--destaque-inverso);
 }
-/* TODO: Criar o projeto album de fotos */
-#projetos > .card > a > img {
+
+#projeto-container .projeto:hover {
+  border-color: var(--destaque);
+  border-left-width: 15px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#projeto-container .foto {
   width: 100%;
-  height: 225px;
-  border-radius: 15px;
+  width: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-#projetos > .card:hover > a > img {
+#projeto-container .projeto:hover img {
   animation: pulsate 2s ease-in-out;
 }
 
 footer {
   background-color: var(--destaque);
-  color: white;
+  color: var(--fundo-card);
   font-weight: bold;
   padding: 9px;
   width: 100%;
